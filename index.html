@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="kk" data-lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- TODO: убрать noindex, когда цены, гарантия и отзывы станут настоящими -->
+<meta name="robots" content="noindex">
+<title>EdCode — информатикадан ҰБТ-ға дайындық | Тегін тест</title>
+<meta name="description" content="Информатикадан ҰБТ-ға онлайн дайындық: нақты ҰБТ форматындағы тесттер, таймер, әр тақырып бойынша нәтиже. Деңгейіңді 2 минутта тегін тексер.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://edcode.kz/">
+<meta property="og:title" content="EdCode — информатикадан ҰБТ-ға дайындық">
+<meta property="og:description" content="ҰБТ-дағы 1 балл — грант немесе 4 жыл ақылы оқу. Деңгейіңді 2 минутта тегін тексер.">
+<!-- TODO: картинка-превью 1200×630 для WhatsApp/Telegram: <meta property="og:image" content="https://edcode.kz/og-image.jpg"> -->
+<meta name="theme-color" content="#17140F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&family=Tektur:wght@600;700;800&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<!-- TODO: счётчики аналитики (Яндекс Метрика / Google Analytics / Meta Pixel) вставить сюда -->
+<style>
+:root{
+  --paper:#FFF7EE;
+  --paper-2:#FBEADA;
+  --card:#FFFFFF;
+  --ink:#17140F;
+  --ink-2:#221D17;
+  --ink-3:#3D352C;
+  --text:#241F19;
+  --muted:#6E6459;
+  --line:#EADBCB;
+  --on-ink:#FFF3E6;
+  --on-ink-muted:#BDAF9F;
+  --line-ink:#3A3129;
+  --brand:#FF7A1A;
+  --brand-hover:#FF8B36;
+  --brand-2:#FFB23F;
+  --brand-ink:#B04C06;
+  --brand-soft:#FFE7D1;
+  --danger:#C9302C;
+  --danger-soft:#FCE4E1;
+  --ok:#1B8A57;
+  --ok-soft:#DDF2E6;
+  --warn:#E39A0B;
+  --wa:#25D366;
+  --grid:rgba(176,76,6,.075);
+  --radius:20px;
+  --shadow:0 1px 2px rgba(23,20,15,.05),0 18px 40px -18px rgba(23,20,15,.28);
+  /* шрифты выбраны с полной поддержкой казахских букв (ә ғ қ ң ө ұ ү һ і) */
+  --f-display:"Tektur",system-ui,sans-serif;
+  --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font:400 17px/1.6 var(--f-body);overflow-x:clip;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+html[data-lang="kk"] [lang="ru"],html[data-lang="ru"] [lang="kk"]{display:none!important}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:700;line-height:1.14;letter-spacing:-.02em;text-wrap:balance;overflow-wrap:break-word}
+h2{font-size:clamp(26px,4.2vw,46px)}
+h3{font-size:19px;line-height:1.28;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:1180px;margin-inline:auto;padding-inline:16px}
+@media (min-width:768px){.wrap{padding-inline:32px}}
+section[id],#quiz-app{scroll-margin-top:76px}
+.i{width:20px;height:20px;flex:none}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border:2px solid transparent;border-radius:14px;font:600 16px/1.2 var(--f-body);text-align:center;text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,box-shadow .15s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--brand);color:var(--ink);box-shadow:0 3px 0 #C95A0C,0 14px 28px -14px rgba(255,122,26,.9)}
+.btn-primary:hover{background:var(--brand-hover)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-wa{background:var(--wa);color:var(--ink);box-shadow:0 3px 0 #179C4A}
+.btn-wa:hover{background:#3BDD78}
+.btn-lg{min-height:58px;padding:14px 26px;font-size:17px}
+.btn-block{width:100%}
+.sec-ink .btn-ghost,.plan.featured .btn-ghost{border-color:var(--on-ink);color:var(--on-ink)}
+.sec-ink .btn-ghost:hover{background:var(--on-ink);color:var(--ink)}
+
+/* ---------- top bar & header ---------- */
+.topbar{background:var(--ink);color:var(--on-ink);font-size:14px;line-height:1.4}
+.topbar a{display:flex;align-items:center;justify-content:center;gap:10px;padding:9px 16px;text-align:center;text-decoration:none}
+.topbar b{font-family:var(--f-mono);color:var(--brand-2)}
+.topbar .go{color:var(--brand-2);font-weight:600;white-space:nowrap}
+.pulse{flex:none;width:8px;height:8px;border-radius:50%;background:#FF4D3D;animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,61,.6)}70%,100%{box-shadow:0 0 0 9px rgba(255,77,61,0)}}
+@media (max-width:560px){.topbar .go{display:none}}
+.header{position:sticky;top:0;z-index:50;background:rgba(255,247,238,.88);border-bottom:1px solid var(--line);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px)}
+.header .wrap{display:flex;align-items:center;gap:16px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font:700 19px/1 var(--f-display);letter-spacing:-.02em;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo em{font-style:normal;color:var(--brand-ink)}
+.nav{display:none;gap:28px;margin-left:28px}
+.nav a{font-weight:500;color:var(--ink-3);text-decoration:none}
+.nav a:hover{color:var(--brand-ink)}
+@media (min-width:1020px){.nav{display:flex}}
+.header-right{display:flex;align-items:center;gap:10px;margin-left:auto}
+.lang{display:flex;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--paper-2)}
+.lang button{padding:8px 10px;border:0;border-radius:999px;background:transparent;font:700 12px/1 var(--f-mono);color:var(--muted);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.login{padding:8px 6px;font-weight:600;text-decoration:none}
+.login:hover{color:var(--brand-ink)}
+.header .btn{min-height:42px;padding:8px 16px;font-size:15px;box-shadow:0 2px 0 #C95A0C}
+@media (max-width:680px){.header .btn{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:44px 0 40px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse 85% 75% at 70% 30%,#000 30%,transparent 78%);mask-image:radial-gradient(ellipse 85% 75% at 70% 30%,#000 30%,transparent 78%)}
+.hero-grid{position:relative;display:grid;gap:24px;align-items:center}
+@media (min-width:980px){.hero{padding:76px 0 56px}.hero-grid{grid-template-columns:1.12fr .88fr;gap:64px}}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--card);font:700 12.5px/1.2 var(--f-mono);color:var(--ink-3)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.hero h1{margin-top:22px;font-size:clamp(32px,5.3vw,64px);font-weight:800;line-height:1.07}
+.hero h1 mark{padding:0 .12em;margin:0 -.04em;border-radius:.14em;color:var(--ink);background:linear-gradient(transparent 10%,var(--brand) 10%,var(--brand) 90%,transparent 90%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.lead{max-width:570px;margin-top:22px;font-size:clamp(17px,1.6vw,19.5px);color:var(--ink-3)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.micro{display:flex;align-items:center;gap:8px;margin-top:16px;font-size:14px;color:var(--muted)}
+.micro .i{width:18px;height:18px;color:var(--ok)}
+@media (max-width:560px){.cta-row .btn{width:100%}}
+.js .hero-copy>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.js .hero-copy>:nth-child(2){animation-delay:.07s}
+.js .hero-copy>:nth-child(3),.js .hero-copy>:nth-child(4){animation-delay:.14s}
+.js .hero-copy>:nth-child(5){animation-delay:.21s}
+.js .hero-copy>:nth-child(6){animation-delay:.28s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+
+.hero-visual{position:relative;width:100%;max-width:440px;margin:60px auto 52px}
+@media (min-width:980px){.hero-visual{margin:0 auto}}
+.result-card{position:relative;z-index:2;padding:22px;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 34px 60px -30px rgba(23,20,15,.38),0 2px 4px rgba(23,20,15,.05);transform:rotate(1.2deg)}
+.js .result-card{animation:drop 1s .2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(28px) rotate(5deg)}}
+.rc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.rc-sub{display:block;font:700 11.5px/1.2 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rc-head strong{display:block;margin-top:5px;font:700 18px/1.3 var(--f-display)}
+.rc-timer{display:flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--paper-2);font:700 13px/1 var(--f-mono);color:var(--brand-ink);white-space:nowrap}
+.rc-timer .i{width:15px;height:15px}
+.rc-score{display:flex;align-items:baseline;gap:8px;margin:18px 0 16px}
+.rc-num{font:800 58px/1 var(--f-display);letter-spacing:-.04em}
+.rc-of{font:700 20px/1 var(--f-display);color:var(--muted)}
+.tag{margin-left:auto;padding:6px 8px;border:1px dashed #D9C3AC;border-radius:8px;font:700 10.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rc-topics{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.rc-topics li{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:14px;font-weight:500}
+.rc-topics b{font:700 13px/1.4 var(--f-mono)}
+.rc-topics .bar{grid-column:1/-1;height:8px;border-radius:99px;background:var(--paper-2);overflow:hidden}
+.rc-topics .bar i{display:block;width:var(--v);height:100%;border-radius:inherit;background:var(--ok);transform-origin:left;animation:grow 1.3s .5s cubic-bezier(.2,.8,.2,1) both}
+.rc-topics .mid .bar i{background:var(--warn)}
+.rc-topics .bad .bar i{background:var(--danger)}
+.rc-topics .bad b{color:var(--danger)}
+@keyframes grow{from{transform:scaleX(0)}}
+.rc-alert{display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding:12px 14px;border-radius:12px;background:var(--danger-soft);color:#8E1F1B;font-size:14px;font-weight:600;line-height:1.4}
+.rc-alert .i{width:18px;height:18px;margin-top:1px}
+.stamp{position:absolute;z-index:4;top:-50px;right:-30px;display:grid;place-items:center;width:132px;height:132px;border-radius:50%;background:var(--brand);box-shadow:0 16px 30px -14px rgba(176,76,6,.7)}
+.stamp .ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 28s linear infinite}
+.stamp text{font:700 11px var(--f-mono);fill:var(--ink)}
+.stamp-core{position:relative;display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--ink);color:var(--brand-2)}
+.stamp-core .i{width:28px;height:28px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bubbles{position:absolute;z-index:1;right:-34px;bottom:-46px;display:grid;gap:7px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow);transform:rotate(7deg)}
+.bubbles div{display:flex;align-items:center;gap:6px}
+.bubbles em{width:16px;font:700 10px/1 var(--f-mono);font-style:normal;color:var(--muted)}
+.bubbles span{display:grid;place-items:center;width:17px;height:17px;border:1.5px solid #DCC8B3;border-radius:50%;font:700 8px/1 var(--f-mono);color:#B9A58F}
+.bubbles span.on{border-color:var(--ink);background:var(--ink);color:var(--ink)}
+.float-badge{position:absolute;z-index:3;left:-26px;bottom:-28px;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;background:var(--ink);color:var(--on-ink);box-shadow:var(--shadow);transform:rotate(-2.5deg)}
+.float-badge b{font:800 28px/1 var(--f-display);color:var(--brand-2)}
+.float-badge span{max-width:150px;font-size:13px;line-height:1.3}
+@media (max-width:560px){
+  .stamp{top:-44px;right:-4px;width:104px;height:104px}
+  .stamp-core{width:48px;height:48px}
+  .stamp-core .i{width:22px;height:22px}
+  .bubbles{display:none}
+  .float-badge{left:6px;bottom:-30px}
+}
+
+.proof{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin:56px 0 0;padding:0;list-style:none;border:1px solid var(--line);border-radius:20px;background:var(--line);overflow:hidden}
+.proof li{padding:20px 18px;background:var(--card)}
+.proof b{display:block;font:800 clamp(26px,3vw,36px)/1 var(--f-display);letter-spacing:-.03em}
+.proof li:first-child b{color:var(--brand-ink)}
+.proof span{display:block;margin-top:8px;font-size:14px;line-height:1.35;color:var(--muted)}
+@media (min-width:860px){.proof{grid-template-columns:repeat(4,1fr)}}
+
+/* ---------- sections ---------- */
+.sec{position:relative;padding:72px 0}
+@media (min-width:980px){.sec{padding:110px 0}}
+.sec-alt{background:var(--paper-2)}
+.sec-ink{background:var(--ink);color:var(--on-ink)}
+.sec-head{max-width:780px;margin-bottom:40px}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px;font:700 12.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brand-ink)}
+.eyebrow::before{content:"";flex:none;width:28px;height:2px;background:currentColor}
+.sec-ink .eyebrow{color:var(--brand-2)}
+.sec-lead{max-width:640px;margin-top:16px;font-size:clamp(17px,1.6vw,19px);color:var(--muted)}
+.sec-ink .sec-lead{color:var(--on-ink-muted)}
+.perf::before{content:"";position:absolute;top:-1px;left:0;right:0;height:10px;background:radial-gradient(circle at 50% 0,var(--perf,var(--paper)) 7px,transparent 7.5px) 0 0/22px 10px repeat-x}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.stagger>:nth-child(2){transition-delay:.08s}
+.stagger>:nth-child(3){transition-delay:.16s}
+.stagger>:nth-child(4){transition-delay:.24s}
+.stagger>:nth-child(5){transition-delay:.32s}
+.stagger>:nth-child(6){transition-delay:.4s}
+
+/* problem */
+.pains{display:grid;gap:16px}
+@media (min-width:720px){.pains{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.pains{grid-template-columns:repeat(4,1fr)}}
+.pain{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.pain .ic{display:grid;place-items:center;width:44px;height:44px;margin-bottom:18px;border-radius:12px;background:var(--danger-soft);color:var(--danger)}
+.pain h3{font-size:18px}
+.pain p{margin-top:10px;font-size:15.5px;color:var(--muted)}
+
+/* time */
+.time-grid{display:grid;gap:36px;align-items:center}
+@media (min-width:980px){.time-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+.cd{padding:30px 28px;border:1px solid var(--line-ink);border-radius:24px;background:linear-gradient(160deg,#241E18,#17140F)}
+.cd-num{font:800 clamp(84px,13vw,150px)/.9 var(--f-display);letter-spacing:-.05em;color:var(--brand)}
+.cd-label{margin-top:16px;font-size:16px;color:var(--on-ink-muted)}
+.bars-title{margin-bottom:20px;font-weight:600}
+.bar-row{display:grid;grid-template-columns:1fr auto;gap:8px 16px;margin-bottom:18px}
+.bar-row .lbl{font-size:15px}
+.bar-row .val{font:700 15px/1.4 var(--f-mono);color:var(--brand-2)}
+.bar-row .track{grid-column:1/-1;height:14px;border-radius:99px;background:#2E271F;overflow:hidden}
+.bar-row .fill{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--brand),var(--brand-2));transition:width 1.2s cubic-bezier(.2,.8,.2,1) .2s}
+.bar-row.later .fill{background:linear-gradient(90deg,#6F6255,#8F8172)}
+.bar-row.later .val{color:var(--on-ink-muted)}
+.js .reveal:not(.in) .fill{width:0!important}
+.loss-line{display:flex;gap:10px;margin-top:6px;padding:14px 16px;border:1px solid rgba(255,77,61,.4);border-radius:14px;background:rgba(255,77,61,.12);font-size:15px;font-weight:600;color:#FFC9C2}
+.loss-line .i{width:18px;height:18px;margin-top:2px}
+.footnote{margin-top:28px;font-size:13px;color:var(--muted)}
+.sec-ink .footnote{color:var(--on-ink-muted)}
+
+/* quiz */
+.quiz-sec{overflow:hidden}
+.quiz-sec::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent)}
+.quiz-grid{position:relative;display:grid;gap:36px;align-items:start}
+@media (min-width:980px){.quiz-grid{grid-template-columns:.85fr 1.15fr;gap:64px}}
+.ticks{display:grid;gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.ticks li{display:flex;align-items:flex-start;gap:12px;font-weight:500}
+.ticks li::before{content:"";flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--ok-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231B8A57' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
+.quiz{padding:clamp(20px,3vw,32px);border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow)}
+.q-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font:700 13px/1.2 var(--f-mono)}
+.q-topic{padding:6px 10px;border-radius:8px;background:var(--brand-soft);color:var(--brand-ink);text-align:right}
+.q-progress{height:6px;margin:14px 0 22px;border-radius:99px;background:var(--paper-2);overflow:hidden}
+.q-progress i{display:block;height:100%;border-radius:inherit;background:var(--brand);transition:width .4s}
+.q-text{font:600 clamp(18px,2vw,21px)/1.4 var(--f-body);letter-spacing:0;outline:none}
+.q-code{margin:16px 0 0;padding:16px 18px;border-radius:14px;background:var(--ink);color:#FFE3C7;font:500 14.5px/1.65 var(--f-mono);overflow-x:auto}
+.q-opts{display:grid;gap:10px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--paper);font:500 16px/1.3 var(--f-body);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
+.opt:hover:not(:disabled){border-color:var(--brand);background:#FFF0E2}
+.opt:disabled{cursor:default}
+.opt-l{display:grid;place-items:center;flex:none;width:30px;height:30px;border:1.5px solid #DCC8B3;border-radius:50%;font:700 13px/1 var(--f-mono);color:var(--muted)}
+.opt.is-right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.is-right .opt-l{border-color:var(--ok);background:var(--ok);color:#fff}
+.opt.is-wrong{border-color:var(--danger);background:var(--danger-soft)}
+.opt.is-wrong .opt-l{border-color:var(--danger);background:var(--danger);color:#fff}
+.fb{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--paper-2);font-size:15.5px}
+.fb strong{display:block;margin-bottom:2px}
+.fb .ok{color:var(--ok)}
+.fb .bad{color:var(--danger)}
+.q-next{margin-top:16px}
+.qr-label{font:700 12.5px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.qr-score{margin-top:10px;font:800 76px/1 var(--f-display);letter-spacing:-.04em}
+.qr-score small{font-size:28px;color:var(--muted)}
+.qr-title{margin-top:14px;font-size:24px;outline:none}
+.qr-text{margin-top:10px;color:var(--ink-3)}
+.qr-sub{margin-top:20px;font-weight:600}
+.qr-list{display:grid;gap:8px;margin:10px 0 0;padding:0;list-style:none}
+.qr-list li{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:15px;font-weight:500}
+.qr-list li.bad{border-color:#F2BDB8;background:var(--danger-soft)}
+.qr-list .m{font:700 14px/1.4 var(--f-mono);color:var(--ok)}
+.qr-list .bad .m{color:var(--danger)}
+.qr-ctas{display:grid;gap:10px;margin-top:22px}
+.link-btn{margin-top:14px;padding:6px 0;border:0;background:none;font-size:14px;font-weight:500;color:var(--muted);text-decoration:underline;cursor:pointer}
+
+/* cost */
+.sec-soft{background:linear-gradient(180deg,var(--brand-soft),var(--paper))}
+.cost-grid{display:grid;gap:36px;align-items:center}
+@media (min-width:980px){.cost-grid{grid-template-columns:1fr 1fr;gap:64px}}
+.calc{padding:clamp(20px,3vw,32px);border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow)}
+.calc-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 12px}
+.calc label{font-weight:600}
+.calc output{font:800 24px/1 var(--f-display);letter-spacing:-.02em}
+.range{-webkit-appearance:none;appearance:none;width:100%;height:10px;margin:22px 0 10px;border-radius:99px;background:linear-gradient(90deg,var(--brand) var(--p,28%),var(--paper-2) var(--p,28%));cursor:pointer}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border:5px solid var(--brand);border-radius:50%;background:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.range::-moz-range-thumb{width:22px;height:22px;border:5px solid var(--brand);border-radius:50%;background:var(--ink)}
+.range:focus-visible{outline-offset:8px}
+.range-scale{display:flex;justify-content:space-between;margin-bottom:12px;font:500 12px/1 var(--f-mono);color:var(--muted)}
+.calc-row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-top:1px dashed var(--line);font-size:15.5px}
+.calc-row b{font:700 17px/1.4 var(--f-mono);white-space:nowrap}
+.calc-row .neg{color:var(--danger)}
+.calc-big{margin-top:10px;padding:18px 20px;border-radius:16px;background:var(--ink);color:var(--on-ink);font:700 clamp(18px,2.2vw,22px)/1.35 var(--f-display);letter-spacing:-.01em}
+.calc-big b{font-size:1.45em;color:var(--brand-2)}
+.calc-note{margin-top:14px;font-size:13px;color:var(--muted)}
+
+/* features */
+.features{display:grid;gap:16px}
+@media (min-width:680px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1040px){.features{grid-template-columns:repeat(3,1fr)}}
+.feat{padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);transition:box-shadow .2s,border-color .2s}
+.feat:hover{border-color:#E2C6A9;box-shadow:var(--shadow)}
+.feat .ic{display:grid;place-items:center;width:46px;height:46px;margin-bottom:18px;border-radius:13px;background:var(--brand-soft);color:var(--brand-ink)}
+.feat h3{font-size:18px}
+.feat p{margin-top:8px;font-size:15.5px;color:var(--muted)}
+.steps-title{margin-top:72px;font-size:clamp(22px,2.6vw,28px)}
+.steps{display:grid;gap:16px;margin:24px 0 0;padding:0;list-style:none}
+@media (min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{padding:26px;border-radius:var(--radius);background:var(--ink);color:var(--on-ink)}
+.step .n{font:800 14px/1 var(--f-mono);color:var(--brand-2)}
+.step h3{margin-top:14px}
+.step p{margin-top:8px;font-size:15.5px;color:var(--on-ink-muted)}
+
+/* authors */
+.authors{display:grid;gap:20px}
+@media (min-width:940px){.authors{grid-template-columns:1fr 1fr}}
+.author{display:flex;flex-direction:column;gap:20px;padding:clamp(22px,3vw,32px);border:1px solid var(--line);border-radius:24px;background:var(--card)}
+.a-head{display:flex;align-items:center;gap:16px}
+.avatar{display:grid;place-items:center;flex:none;width:68px;height:68px;border-radius:22px;background:var(--ink);color:var(--brand-2);font:800 21px/1 var(--f-display)}
+.a-role{margin-top:6px;font-size:14px;color:var(--muted)}
+.a-stat{display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;background:var(--brand-soft)}
+.a-stat b{flex:none;font:800 42px/1 var(--f-display);letter-spacing:-.03em;color:var(--brand-ink)}
+.a-stat b.sm{font-size:17px;line-height:1.25;letter-spacing:-.01em}
+.a-stat span{font-size:14.5px;font-weight:600;line-height:1.35}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:var(--paper);font-size:13.5px;font-weight:600}
+.ach-title{font:700 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ach{display:grid;gap:10px;margin:12px 0 0;padding:0;list-style:none}
+.ach li{display:flex;gap:10px;font-size:15px}
+.ach li::before{content:"★";flex:none;color:var(--brand)}
+.yt-row{margin-top:28px;text-align:center}
+
+/* parents */
+.parents-grid{display:grid;gap:44px;align-items:center}
+@media (min-width:980px){.parents-grid{grid-template-columns:1.1fr .9fr;gap:64px}}
+.parents-grid h2{font-size:clamp(24px,3.3vw,38px)}
+.checks{display:grid;gap:14px;margin:28px 0 32px;padding:0;list-style:none}
+.checks li{display:flex;align-items:flex-start;gap:12px}
+.checks li::before{content:"✓";display:grid;place-items:center;flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;background:var(--brand);color:var(--ink);font-size:13px;font-weight:800}
+.report{padding:24px;border-radius:22px;background:#FFFDF9;color:var(--text);box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(-1.5deg)}
+.report-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.report-h strong{font:700 15.5px/1.3 var(--f-display)}
+.report dl{display:grid;margin:0}
+.report .r{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.report dt{color:var(--muted)}
+.report dd{margin:0;font-weight:700;text-align:right}
+.report .up{color:var(--ok)}
+.report .warn{color:var(--danger)}
+.report-note{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--paper-2);font-size:14.5px}
+
+/* results */
+.results{display:grid;gap:16px}
+@media (min-width:860px){.results{grid-template-columns:repeat(3,1fr)}}
+.tcard{padding:24px;border:2px dashed #E2C9AF;border-radius:var(--radius);background:repeating-linear-gradient(-45deg,transparent 0 12px,rgba(176,76,6,.03) 12px 24px)}
+.t-ribbon{display:inline-block;margin-bottom:16px;padding:6px 8px;border-radius:6px;background:var(--brand-soft);font:700 11px/1.2 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--brand-ink)}
+.t-score{font:800 24px/1.15 var(--f-display);color:var(--muted)}
+.t-name{margin-top:14px;font-weight:700}
+.t-meta{font-size:14px;color:var(--muted)}
+.t-quote{margin-top:12px;font-style:italic;color:var(--muted)}
+
+/* pricing */
+.plans{display:grid;gap:18px}
+@media (min-width:1000px){.plans{grid-template-columns:1fr 1.1fr 1fr;align-items:stretch}.plan.featured{margin-block:-16px}}
+.plan{display:flex;flex-direction:column;padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--card)}
+.plan h3{font-size:21px}
+.plan-desc{margin-top:6px;font-size:15px;color:var(--muted)}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-top:22px}
+.price b{font:800 40px/1 var(--f-display);letter-spacing:-.03em;white-space:nowrap}
+.price>span{font-size:15px;color:var(--muted)}
+.plan ul{display:grid;align-content:start;flex:1;gap:10px;margin:22px 0 26px;padding:0;list-style:none}
+.plan li{display:flex;gap:10px;font-size:15.5px}
+.plan li::before{content:"✓";flex:none;font-weight:800;color:var(--ok)}
+.plan.featured{position:relative;padding:36px 30px;border-color:var(--ink);background:var(--ink);color:var(--on-ink);box-shadow:0 34px 64px -26px rgba(23,20,15,.6)}
+.plan.featured .plan-desc,.plan.featured .price>span{color:var(--on-ink-muted)}
+.plan.featured li::before{color:var(--brand-2)}
+.badge{position:absolute;top:-14px;left:30px;padding:8px 12px;border-radius:99px;background:var(--brand);color:var(--ink);font:700 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase}
+.permonth{margin-top:14px;padding:12px 14px;border-radius:12px;background:#2A231C;font-size:14.5px}
+.permonth b{color:var(--brand-2)}
+.permonth small{display:block;margin-top:4px;font-size:13px;color:var(--on-ink-muted)}
+.plan-note{margin:-10px 0 16px;font-size:13.5px;font-weight:600;color:var(--danger)}
+.guarantee{display:flex;align-items:center;gap:16px;margin-top:40px;padding:20px 22px;border:1px solid #B9E3CC;border-radius:20px;background:var(--ok-soft)}
+.guarantee .ic{display:grid;place-items:center;flex:none;width:50px;height:50px;border-radius:14px;background:var(--ok);color:#fff}
+.guarantee .i{width:26px;height:26px}
+.guarantee b{display:block;margin-bottom:2px;font:700 17px/1.3 var(--f-display)}
+.guarantee p{font-size:15.5px}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:840px}
+.faq details{padding:0 20px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-size:17px;font-weight:600;list-style:none;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--paper-2);font:700 18px/1 var(--f-mono);transition:transform .2s,background-color .2s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--brand);color:var(--ink)}
+.faq details p{padding-bottom:18px;color:var(--ink-3)}
+
+/* final */
+.final{text-align:center}
+.final h2{max-width:920px;margin-inline:auto;font-size:clamp(28px,4.6vw,52px)}
+.cd-inline{display:inline-flex;align-items:baseline;gap:12px;margin-top:30px;padding:14px 24px;border:1px solid var(--line-ink);border-radius:18px;font-size:17px;color:var(--on-ink-muted)}
+.cd-inline b{font:800 52px/1 var(--f-display);letter-spacing:-.04em;color:var(--brand)}
+.final .sub{margin-top:18px;color:var(--on-ink-muted)}
+.final .cta-row{justify-content:center}
+
+/* footer */
+.footer{padding:52px 0 32px;background:#100E0A;color:var(--on-ink-muted);font-size:15px}
+.footer-grid{display:grid;gap:30px}
+@media (min-width:760px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.footer .logo{color:var(--on-ink)}
+.footer .logo em{color:var(--brand-2)}
+.footer-about{max-width:340px;margin-top:14px}
+.footer h4{margin-bottom:14px;font:700 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--on-ink)}
+.footer ul{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--brand-2)}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid var(--line-ink);font-size:13px}
+
+/* sticky CTAs */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(255,247,238,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .3s}
+.mbar.show{transform:none}
+.mbar .btn-primary{flex:1}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:60;display:none;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--wa);color:var(--ink);box-shadow:0 12px 30px -8px rgba(37,211,102,.75);transition:transform .2s}
+.wa-float:hover{transform:scale(1.06)}
+.wa-float .i{width:32px;height:32px}
+@media (max-width:767px){body{padding-bottom:74px}}
+@media (min-width:768px){.mbar{display:none}.wa-float{display:grid}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.5-2a13.2 13.2 0 0 0 6.5 1.7c7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-3.9 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.8-5.9C4.9 9.9 9.9 5.2 16 5.2s11 4.7 11 10.6-4.9 10.6-11 10.6zm6-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></g></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></g></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20h16M7 16v-4M12 16V7M17 16v-6"/></g></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 5.5h6a3 3 0 0 1 3 3V20a2.5 2.5 0 0 0-2.5-2.5H3zM21 5.5h-6a3 3 0 0 0-3 3V20a2.5 2.5 0 0 1 2.5-2.5H21z"/></g></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5L20.5 6 17 9.5"/><path d="M3.5 11V9a3 3 0 0 1 3-3h14"/><path d="M7 21.5L3.5 18 7 14.5"/><path d="M20.5 13v2a3 3 0 0 1-3 3h-14"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 2.5v4M16 2.5v4"/></g></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5M12 17.3v.1"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.8-3.4 8-8 9-4.6-1-8-4.2-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z"/></g></symbol>
+</svg>
+
+<div class="topbar">
+  <a href="#quiz">
+    <span class="pulse" aria-hidden="true"></span>
+    <span lang="kk">Негізгі ҰБТ-ға дейін шамамен <b data-days>194</b> күн қалды.</span>
+    <span lang="ru">До основного ЕНТ — примерно <b data-days>194</b> <span data-days-word>дня</span>.</span>
+    <span class="go"><span lang="kk">Деңгейіңді тексер →</span><span lang="ru">Проверь свой уровень →</span></span>
+  </a>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="EdCode">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#17140F"/><path d="M13 11l-6 6 6 6M21 11l6 6-6 6" fill="none" stroke="#FF7A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><em>Ed</em>Code</span>
+    </a>
+    <nav class="nav" aria-label="EdCode">
+      <a href="#features"><span lang="kk">Неге EdCode</span><span lang="ru">Почему EdCode</span></a>
+      <a href="#authors"><span lang="kk">Мұғалімдер</span><span lang="ru">Учителя</span></a>
+      <a href="#pricing"><span lang="kk">Бағалар</span><span lang="ru">Цены</span></a>
+      <a href="#faq"><span lang="kk">Сұрақтар</span><span lang="ru">Вопросы</span></a>
+    </nav>
+    <div class="header-right">
+      <div class="lang" role="group" aria-label="Тіл / Язык">
+        <button type="button" data-set-lang="kk" aria-pressed="true">ҚАЗ</button>
+        <button type="button" data-set-lang="ru" aria-pressed="false">РУС</button>
+      </div>
+      <a class="login" href="https://edcode.kz/login"><span lang="kk">Кіру</span><span lang="ru">Войти</span></a>
+      <a class="btn btn-primary" href="#quiz"><span lang="kk">Тегін тест</span><span lang="ru">Бесплатный тест</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="chip"><span class="dot" aria-hidden="true"></span><span lang="kk">Информатика · ҰБТ-2027 дайындығы</span><span lang="ru">Информатика · подготовка к ЕНТ-2027</span></p>
+      <h1>
+        <span lang="kk">ҰБТ-дағы <mark>1&nbsp;балл</mark> — бұл грант немесе 4&nbsp;жыл ақылы оқу.</span>
+        <span lang="ru"><mark>1&nbsp;балл</mark> на ЕНТ — это грант или 4&nbsp;года платной учёбы.</span>
+      </h1>
+      <p class="lead" lang="kk">Информатикадан ҰБТ-ға нақты емтихан форматында дайындал: таймер, автоматты тексеру, ал әлсіз тақырыптарың бірден көрінеді. Платформаны ҰБТ-да рекордтық нәтиже көрсеткен информатика мұғалімдері жасады.</p>
+      <p class="lead" lang="ru">Готовься к ЕНТ по информатике в реальном формате экзамена: таймер, автопроверка, а слабые темы видно сразу. Платформу создали учителя информатики, показавшие рекордный результат на ЕНТ.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#quiz"><span lang="kk">Деңгейімді тегін тексеру</span><span lang="ru">Проверить уровень бесплатно</span><svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="#pricing"><span lang="kk">Бағаларды көру</span><span lang="ru">Посмотреть цены</span></a>
+      </div>
+      <p class="micro"><svg class="i"><use href="#i-check"/></svg><span lang="kk">Тіркеусіз · 5 сұрақ · 2 минут</span><span lang="ru">Без регистрации · 5 вопросов · 2 минуты</span></p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="stamp">
+        <svg class="ring" viewBox="0 0 132 132">
+          <defs><path id="ring-path" d="M66,66 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+          <text lang="kk"><textPath href="#ring-path" textLength="312">ҰБТ-2027 · ИНФОРМАТИКА · ГРАНТ ·</textPath></text>
+          <text lang="ru"><textPath href="#ring-path" textLength="312">ЕНТ-2027 · ИНФОРМАТИКА · ГРАНТ ·</textPath></text>
+        </svg>
+        <span class="stamp-core"><svg class="i"><use href="#i-code"/></svg></span>
+      </div>
+      <div class="bubbles">
+        <div><em>21</em><span>A</span><span class="on">B</span><span>C</span><span>D</span><span>E</span></div>
+        <div><em>22</em><span>A</span><span>B</span><span>C</span><span class="on">D</span><span>E</span></div>
+        <div><em>23</em><span class="on">A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+        <div><em>24</em><span>A</span><span>B</span><span class="on">C</span><span>D</span><span>E</span></div>
+        <div><em>25</em><span>A</span><span>B</span><span>C</span><span>D</span><span class="on">E</span></div>
+      </div>
+      <div class="result-card">
+        <div class="rc-head">
+          <div>
+            <span class="rc-sub">EdCode · <span lang="kk">Информатика</span><span lang="ru">Информатика</span></span>
+            <strong><span lang="kk">Тест нәтижесі</span><span lang="ru">Результат теста</span></strong>
+          </div>
+          <span class="rc-timer"><svg class="i"><use href="#i-clock"/></svg>38:12</span>
+        </div>
+        <div class="rc-score"><span class="rc-num">31</span><span class="rc-of">/ 50</span><span class="tag"><span lang="kk">Мысал</span><span lang="ru">Пример</span></span></div>
+        <ul class="rc-topics">
+          <li class="good"><span><span lang="kk">Санау жүйелері</span><span lang="ru">Системы счисления</span></span><b>92%</b><span class="bar"><i style="--v:92%"></i></span></li>
+          <li class="good"><span><span lang="kk">Ақпаратты өлшеу</span><span lang="ru">Измерение информации</span></span><b>81%</b><span class="bar"><i style="--v:81%"></i></span></li>
+          <li class="mid"><span><span lang="kk">Логика негіздері</span><span lang="ru">Основы логики</span></span><b>58%</b><span class="bar"><i style="--v:58%"></i></span></li>
+          <li class="bad"><span><span lang="kk">Python: циклдар</span><span lang="ru">Python: циклы</span></span><b>41%</b><span class="bar"><i style="--v:41%"></i></span></li>
+          <li class="bad"><span><span lang="kk">Компьютерлік желілер</span><span lang="ru">Компьютерные сети</span></span><b>34%</b><span class="bar"><i style="--v:34%"></i></span></li>
+        </ul>
+        <div class="rc-alert"><svg class="i"><use href="#i-alert"/></svg><span><span lang="kk">3 тақырып грантқа кедергі. Осылардан баста.</span><span lang="ru">3 темы мешают гранту. Начни с них.</span></span></div>
+      </div>
+      <div class="float-badge"><b>138</b><span><span lang="kk">ҰБТ-2025 рекорды, Шымкент</span><span lang="ru">рекорд ЕНТ-2025, Шымкент</span></span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ul class="proof">
+      <li><b>138</b><span lang="kk">ҰБТ-2025 рекордтық балл, Шымкент</span><span lang="ru">рекордный балл ЕНТ-2025, Шымкент</span></li>
+      <li><b>298+</b><span lang="kk">оқушы платформаны қолданады</span><span lang="ru">учеников пользуются платформой</span></li>
+      <li><b>10 000+</b><span lang="kk">YouTube аудиториясы</span><span lang="ru">аудитория на YouTube</span></li>
+      <li><b>10+</b><span lang="kk">жыл — авторлардың ұстаздық тәжірибесі</span><span lang="ru">лет — педагогический опыт авторов</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">01 · Мәселе</span><span lang="ru">01 · Проблема</span></p>
+      <h2><span lang="kk">Неге оқушылар информатикадан грантты жіберіп алады?</span><span lang="ru">Почему ученики теряют грант на информатике?</span></h2>
+      <p class="sec-lead"><span lang="kk">Көбіне себеп білімнің жоқтығында емес — дайындықтың дұрыс болмауында.</span><span lang="ru">Чаще всего дело не в знаниях, а в неправильной подготовке.</span></p>
+    </div>
+    <div class="pains stagger">
+      <article class="pain reveal">
+        <div class="ic"><svg class="i"><use href="#i-book"/></svg></div>
+        <h3><span lang="kk">«Сабақта өттік қой»</span><span lang="ru">«Мы же это проходили»</span></h3>
+        <p><span lang="kk">Сабақта түсіну мен ҰБТ-да таймермен дұрыс шешу — екі бөлек дағды.</span><span lang="ru">Понять тему на уроке и решить её на ЕНТ под таймером — два разных навыка.</span></p>
+      </article>
+      <article class="pain reveal">
+        <div class="ic"><svg class="i"><use href="#i-clock"/></svg></div>
+        <h3><span lang="kk">Уақыт жетпейді</span><span lang="ru">Не хватает времени</span></h3>
+        <p><span lang="kk">ҰБТ-да бір сұраққа орта есеппен 2 минуттай ғана уақыт бар. Таймермен жаттықпаған оқушы соңғы сұрақтарды асығыс белгілейді.</span><span lang="ru">На ЕНТ в среднем около 2 минут на вопрос. Кто не тренировался с таймером, последние вопросы отмечает наугад.</span></p>
+      </article>
+      <article class="pain reveal">
+        <div class="ic"><svg class="i"><use href="#i-repeat"/></svg></div>
+        <h3><span lang="kk">Бір қате — қайта-қайта</span><span lang="ru">Одна ошибка — снова и снова</span></h3>
+        <p><span lang="kk">Қатенің себебін ешкім түсіндірмесе, ол ҰБТ-да тағы қайталанады.</span><span lang="ru">Если никто не объяснил, почему ответ неверный, та же ошибка повторится на ЕНТ.</span></p>
+      </article>
+      <article class="pain reveal">
+        <div class="ic"><svg class="i"><use href="#i-cal"/></svg></div>
+        <h3><span lang="kk">«Әлі ерте»</span><span lang="ru">«Ещё рано»</span></h3>
+        <p><span lang="kk">Дайындықты көктемге қалдыру — ең қымбатқа түсетін шешім.</span><span lang="ru">Отложить подготовку на весну — самое дорогое решение.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-ink perf" id="time" style="--perf:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">02 · Уақыт</span><span lang="ru">02 · Время</span></p>
+      <h2><span lang="kk">ҰБТ кешірмейді. Бірақ уақыт әлі бар.</span><span lang="ru">ЕНТ не прощает. Но время ещё есть.</span></h2>
+      <p class="sec-lead"><span lang="kk">Күніне небәрі 20 минут дайындық мамырға дейін ондаған сағатқа жиналады. Кейінге қалдырылған әр апта сол сағаттардың бір бөлігін алып кетеді.</span><span lang="ru">Всего 20 минут в день до мая складываются в десятки часов подготовки. Каждая отложенная неделя отнимает часть этих часов.</span></p>
+    </div>
+    <div class="time-grid">
+      <div class="cd reveal">
+        <div class="cd-num" data-days data-countup>194</div>
+        <p class="cd-label"><span lang="kk">күн — негізгі ҰБТ-ға дейін (шамамен)</span><span lang="ru"><span data-days-word>дня</span> до основного ЕНТ (примерно)</span></p>
+      </div>
+      <div class="reveal">
+        <p class="bars-title"><span lang="kk">Күніне 20 минуттан дайындалсаң:</span><span lang="ru">Если заниматься по 20 минут в день:</span></p>
+        <div id="time-bars"></div>
+        <p class="loss-line" id="loss-line" hidden><svg class="i"><use href="#i-alert"/></svg><span></span></p>
+      </div>
+    </div>
+    <p class="footnote"><span lang="kk">* Есеп шамамен: негізгі ҰБТ <span data-unt-date>15 мамырда</span> басталады деп алынды. Нақты күндерді Ұлттық тестілеу орталығы жариялайды.</span><span lang="ru">* Расчёт примерный: начало основного ЕНТ принято за <span data-unt-date>15 мая</span>. Точные даты объявляет Национальный центр тестирования.</span></p>
+  </div>
+</section>
+
+<section class="sec quiz-sec" id="quiz">
+  <div class="wrap quiz-grid">
+    <div class="reveal">
+      <p class="eyebrow"><span lang="kk">03 · Тегін тест</span><span lang="ru">03 · Бесплатный тест</span></p>
+      <h2><span lang="kk">Грантқа қаншалықты жақынсың? 2 минутта тексер.</span><span lang="ru">Насколько близко ты к гранту? Проверь за 2 минуты.</span></h2>
+      <p class="sec-lead"><span lang="kk">ҰБТ стиліндегі 5 сұрақ, 5 түрлі тақырып. Тіркелу де, төлем де қажет емес — соңында әлсіз тақырыптарыңды көресің.</span><span lang="ru">5 вопросов в стиле ЕНТ по 5 разным темам. Без регистрации и оплаты — в конце увидишь свои слабые темы.</span></p>
+      <ul class="ticks">
+        <li><span lang="kk">Әр жауаптан кейін — түсіндірме</span><span lang="ru">После каждого ответа — объяснение</span></li>
+        <li><span lang="kk">Соңында — әр тақырып бойынша нәтиже</span><span lang="ru">В конце — результат по каждой теме</span></li>
+        <li><span lang="kk">Нәтижені мұғалімге WhatsApp арқылы жіберуге болады</span><span lang="ru">Результат можно отправить учителю в WhatsApp</span></li>
+      </ul>
+    </div>
+    <div class="quiz" id="quiz-app">
+      <noscript><p>Тест JavaScript арқылы жұмыс істейді. / Тест работает с включённым JavaScript. <a href="https://edcode.kz/register">edcode.kz/register</a></p></noscript>
+    </div>
+    <p class="sr-only" id="quiz-live" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="sec sec-soft" id="cost">
+  <div class="wrap cost-grid">
+    <div class="reveal">
+      <p class="eyebrow"><span lang="kk">04 · Есептеп көр</span><span lang="ru">04 · Посчитай</span></p>
+      <h2><span lang="kk">Грантты жіберіп алу қанша тұрады?</span><span lang="ru">Сколько стоит упущенный грант?</span></h2>
+      <p class="sec-lead"><span lang="kk">Грант болмаса — оқу ақылы. IT мамандықтарында бұл жылына жүздеген мың, кейде миллионнан астам теңге. Өз университетіңнің бағасын қойып көр.</span><span lang="ru">Нет гранта — учёба платная. На IT-специальностях это сотни тысяч, а иногда больше миллиона тенге в год. Подставь цену своего вуза.</span></p>
+    </div>
+    <div class="calc reveal">
+      <div class="calc-top">
+        <label for="tuition"><span lang="kk">Жылдық оқу ақысы</span><span lang="ru">Стоимость обучения в год</span></label>
+        <output id="tuition-out" for="tuition">1 200 000 ₸</output>
+      </div>
+      <input class="range" id="tuition" type="range" min="500000" max="3000000" step="50000" value="1200000">
+      <div class="range-scale"><span>500 000 ₸</span><span>3 000 000 ₸</span></div>
+      <div class="calc-row"><span><span lang="kk">4 жыл ақылы оқу</span><span lang="ru">4 года платной учёбы</span></span><b class="neg" id="total-out">4 800 000 ₸</b></div>
+      <div class="calc-row"><span><span lang="kk">EdCode «ҰБТ-ға дейін» тарифі</span><span lang="ru">Тариф EdCode «До ЕНТ»</span></span><b><span data-price="full">24&nbsp;990</span>&nbsp;₸</b></div>
+      <p class="calc-big"><span lang="kk">Дайындық шамамен <b data-ratio>192</b> есе арзан</span><span lang="ru">Подготовка дешевле примерно в <b data-ratio>192</b> <span data-ratio-word>раза</span></span></p>
+      <p class="calc-note"><span lang="kk">Есеп шамамен. Грантқа ешкім 100% кепілдік бере алмайды — бірақ дайындықсыз мүмкіндік әлдеқайда аз.</span><span lang="ru">Расчёт примерный. Грант не может гарантировать никто — но без подготовки шансов заметно меньше.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">05 · Шешім</span><span lang="ru">05 · Решение</span></p>
+      <h2><span lang="kk">Жай тест емес — грантқа апаратын жүйе</span><span lang="ru">Не просто тесты — система, которая ведёт к гранту</span></h2>
+    </div>
+    <div class="features stagger">
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-clock"/></svg></div>
+        <h3><span lang="kk">Нақты ҰБТ форматы</span><span lang="ru">Реальный формат ЕНТ</span></h3>
+        <p><span lang="kk">Сұрақ құрылымы мен таймер — емтихандағыдай. ҰБТ күні ештеңе таңсық болмайды.</span><span lang="ru">Структура вопросов и таймер — как на экзамене. В день ЕНТ ничто не застанет врасплох.</span></p>
+      </article>
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-target"/></svg></div>
+        <h3><span lang="kk">Әлсіз тақырыптар бірден көрінеді</span><span lang="ru">Слабые темы видно сразу</span></h3>
+        <p><span lang="kk">Әр тесттен кейін тақырып бойынша нәтиже: нені қайталау керегін нақты білесің.</span><span lang="ru">После каждого теста — результат по темам: точно знаешь, что повторять.</span></p>
+      </article>
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-msg"/></svg></div>
+        <h3><span lang="kk">Әр қатенің түсіндірмесі</span><span lang="ru">Разбор каждой ошибки</span></h3>
+        <p><span lang="kk">Неге қате екенін түсінесің — сол қате ҰБТ-да қайталанбайды.</span><span lang="ru">Понимаешь, почему ответ неверный, — и на ЕНТ эта ошибка уже не повторится.</span></p>
+      </article>
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-chart"/></svg></div>
+        <h3><span lang="kk">Прогресс тарихы</span><span lang="ru">История прогресса</span></h3>
+        <p><span lang="kk">Барлық тесттер мен балдар жеке кабинетте сақталады — өсуіңді көресің.</span><span lang="ru">Все тесты и баллы сохраняются в личном кабинете — видно, как ты растёшь.</span></p>
+      </article>
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-eye"/></svg></div>
+        <h3><span lang="kk">Мұғалім бақылауы</span><span lang="ru">Контроль учителя</span></h3>
+        <p><span lang="kk">Мұғалім топтың да, әр оқушының да үлгерімін көреді.</span><span lang="ru">Учитель видит успеваемость и всей группы, и каждого ученика.</span></p>
+      </article>
+      <article class="feat reveal">
+        <div class="ic"><svg class="i"><use href="#i-phone"/></svg></div>
+        <h3><span lang="kk">Телефоннан да ыңғайлы</span><span lang="ru">Удобно с телефона</span></h3>
+        <p><span lang="kk">Үйде, автобуста, үзілісте — кез келген құрылғыдан. Ештеңе орнатпайсың.</span><span lang="ru">Дома, в автобусе, на перемене — с любого устройства. Ничего устанавливать не нужно.</span></p>
+      </article>
+    </div>
+
+    <h3 class="steps-title reveal"><span lang="kk">Қалай басталады</span><span lang="ru">Как начать</span></h3>
+    <ol class="steps stagger">
+      <li class="step reveal">
+        <span class="n">01</span>
+        <h3><span lang="kk">Тегін тест тапсыр</span><span lang="ru">Пройди бесплатный тест</span></h3>
+        <p><span lang="kk">Деңгейіңді және әлсіз тақырыптарыңды біл.</span><span lang="ru">Узнай свой уровень и слабые темы.</span></p>
+      </li>
+      <li class="step reveal">
+        <span class="n">02</span>
+        <h3><span lang="kk">Тарифті таңда</span><span lang="ru">Выбери тариф</span></h3>
+        <p><span lang="kk">WhatsApp-қа жаз, Kaspi арқылы төле — логин мен құпия сөз аласың.</span><span lang="ru">Напиши в WhatsApp и оплати через Kaspi — получишь логин и пароль.</span></p>
+      </li>
+      <li class="step reveal">
+        <span class="n">03</span>
+        <h3><span lang="kk">Жүйелі дайындал</span><span lang="ru">Готовься системно</span></h3>
+        <p><span lang="kk">Тақырыптық тесттер, апталық сынақ тесттер, прогресті бақылау.</span><span lang="ru">Тесты по темам, еженедельные пробники и контроль прогресса.</span></p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="authors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">06 · Мұғалімдер</span><span lang="ru">06 · Учителя</span></p>
+      <h2><span lang="kk">Платформаны нәтижесі дәлелденген ұстаздар жасады</span><span lang="ru">Платформу создали учителя с доказанным результатом</span></h2>
+      <p class="sec-lead"><span lang="kk">Сен дайындалатын тесттерді ҰБТ-ны іштей білетін мұғалімдер құрастырды.</span><span lang="ru">Тесты, по которым ты готовишься, составили учителя, знающие ЕНТ изнутри.</span></p>
+    </div>
+    <div class="authors stagger">
+      <article class="author reveal">
+        <div class="a-head">
+          <!-- TODO: заменить инициалы на фото: <img class="avatar" src="..." alt="Есенбеков Курбаналы"> -->
+          <div class="avatar" aria-hidden="true">ЕК</div>
+          <div>
+            <h3>Есенбеков Курбаналы Сералиевич</h3>
+            <p class="a-role"><span lang="kk">Информатика мұғалімі · Педагогика ғылымының магистрі · Педагог-сарапшы</span><span lang="ru">Учитель информатики · Магистр педагогических наук · Педагог-эксперт</span></p>
+          </div>
+        </div>
+        <div class="a-stat"><b>138</b><span><span lang="kk">ҰБТ-2025: Шымкент бойынша рекордтық балл</span><span lang="ru">ЕНТ-2025: рекордный балл по Шымкенту</span></span></div>
+        <ul class="tags">
+          <li><span lang="kk">10 жыл тәжірибе</span><span lang="ru">10 лет опыта</span></li>
+          <li><span lang="kk">ҰБТ саласында 5-ші жыл</span><span lang="ru">5-й год в подготовке к ЕНТ</span></li>
+          <li><span lang="kk">Әдістемелік кітаптар авторы</span><span lang="ru">Автор методических книг</span></li>
+          <li>YouTube: 10 000+</li>
+        </ul>
+        <div>
+          <p class="ach-title"><span lang="kk">Жетістіктер</span><span lang="ru">Достижения</span></p>
+          <ul class="ach">
+            <li><span lang="kk">Информатикадан пәндік олимпиада: аудандық кезең — I орын, қалалық кезең — II орын</span><span lang="ru">Предметная олимпиада по информатике: районный этап — I место, городской — II место</span></li>
+            <li><span lang="kk">«Зерде» республикалық байқауы, қалалық кезең — II орын</span><span lang="ru">Республиканский конкурс «Зерде», городской этап — II место</span></li>
+            <li><span lang="kk">«Зерделі» онлайн платформасында үздік нәтижелер</span><span lang="ru">Лучшие результаты на онлайн-платформе «Зерделі»</span></li>
+          </ul>
+        </div>
+      </article>
+      <article class="author reveal">
+        <div class="a-head">
+          <!-- TODO: заменить инициалы на фото -->
+          <div class="avatar" aria-hidden="true">ТБ</div>
+          <div>
+            <h3>Тастанбек Беклан Момынбайұлы</h3>
+            <p class="a-role"><span lang="kk">Информатика мұғалімі · Педагогика ғылымының магистрі · Педагог-зерттеуші</span><span lang="ru">Учитель информатики · Магистр педагогических наук · Педагог-исследователь</span></p>
+          </div>
+        </div>
+        <div class="a-stat"><b class="sm">Дубай<br>Дортмунд</b><span><span lang="kk">Робототехникадан халықаралық жарыстардың жүлдегері</span><span lang="ru">Призёр международных соревнований по робототехнике</span></span></div>
+        <ul class="tags">
+          <li><span lang="kk">12 жыл тәжірибе</span><span lang="ru">12 лет опыта</span></li>
+          <li><span lang="kk">ҰБТ саласында 5-ші жыл</span><span lang="ru">5-й год в подготовке к ЕНТ</span></li>
+          <li><span lang="kk">Әдістемелік кітаптар авторы</span><span lang="ru">Автор методических книг</span></li>
+        </ul>
+        <div>
+          <p class="ach-title"><span lang="kk">Жетістіктер</span><span lang="ru">Достижения</span></p>
+          <ul class="ach">
+            <li><span lang="kk">Информатикадан пәндік олимпиада, қалалық кезең — II орын</span><span lang="ru">Предметная олимпиада по информатике, городской этап — II место</span></li>
+            <li><span lang="kk">KEMENGER ҰБТ-ға дайындық орталығында үздік нәтижелер</span><span lang="ru">Лучшие результаты в центре подготовки к ЕНТ KEMENGER</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <p class="yt-row reveal" data-youtube hidden>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener" data-youtube-link><svg class="i"><use href="#i-play"/></svg><span lang="kk">YouTube-тағы видеосабақтар</span><span lang="ru">Видеоуроки на YouTube</span></a>
+    </p>
+  </div>
+</section>
+
+<section class="sec sec-ink perf" id="parents" style="--perf:var(--paper-2)">
+  <div class="wrap parents-grid">
+    <div class="reveal">
+      <p class="eyebrow"><span lang="kk">07 · Ата-аналарға</span><span lang="ru">07 · Родителям</span></p>
+      <h2><span lang="kk">Балаңыз шынымен дайындалып жүр ме — әлде тек «дайындалып жатырмын» дей ме?</span><span lang="ru">Ваш ребёнок правда готовится — или только говорит, что готовится?</span></h2>
+      <p class="sec-lead"><span lang="kk">EdCode-та әр тест, әр балл және әр тақырып бойынша нәтиже сақталады. Сіз уәдеге емес, нақты цифрларға қарайсыз.</span><span lang="ru">В EdCode сохраняется каждый тест, каждый балл и результат по каждой теме. Вы смотрите не на обещания, а на цифры.</span></p>
+      <ul class="checks">
+        <li><span lang="kk">Ай сайынғы есеп: прогресс және әлсіз тақырыптар</span><span lang="ru">Ежемесячный отчёт: прогресс и слабые темы</span></li>
+        <li><span lang="kk">Бір рет төлейсіз — ҰБТ-ға дейін қолжетімді</span><span lang="ru">Платите один раз — доступ до самого ЕНТ</span></li>
+        <li><span lang="kk">Сұрақтарыңызға мұғалім WhatsApp-та жауап береді</span><span lang="ru">Учитель отвечает на ваши вопросы в WhatsApp</span></li>
+      </ul>
+      <a class="btn btn-primary btn-lg" data-wa="parent" href="https://wa.me/77718861404" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span lang="kk">Ата-ана ретінде кеңес алу</span><span lang="ru">Консультация для родителей</span></a>
+    </div>
+    <div class="reveal" aria-hidden="true">
+      <div class="report">
+        <div class="report-h"><strong><span lang="kk">Ай сайынғы есеп · Қараша</span><span lang="ru">Отчёт за месяц · Ноябрь</span></strong><span class="tag"><span lang="kk">Мысал</span><span lang="ru">Пример</span></span></div>
+        <dl>
+          <div class="r"><dt><span lang="kk">Тапсырылған тест</span><span lang="ru">Пройдено тестов</span></dt><dd>14</dd></div>
+          <div class="r"><dt><span lang="kk">Орташа нәтиже</span><span lang="ru">Средний результат</span></dt><dd class="up">58% → 71%</dd></div>
+          <div class="r"><dt><span lang="kk">Әлсіз тақырып</span><span lang="ru">Слабая тема</span></dt><dd class="warn"><span lang="kk">Python: циклдар</span><span lang="ru">Python: циклы</span></dd></div>
+          <div class="r"><dt><span lang="kk">Келесі мақсат</span><span lang="ru">Следующая цель</span></dt><dd>80%</dd></div>
+        </dl>
+        <p class="report-note"><span lang="kk"><b>Мұғалім пікірі:</b> логика жақсарды, енді Python-ға көңіл бөлеміз.</span><span lang="ru"><b>Комментарий учителя:</b> логика подтянулась, теперь берёмся за Python.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">08 · Нәтижелер</span><span lang="ru">08 · Результаты</span></p>
+      <h2><span lang="kk">Оқушыларымыздың нәтижелері</span><span lang="ru">Результаты наших учеников</span></h2>
+      <p class="sec-lead"><span lang="kk">Нақты есімдер, нақты балдар.</span><span lang="ru">Реальные имена, реальные баллы.</span></p>
+    </div>
+    <!-- TODO: ШАБЛОН. Замените карточки реальными отзывами (имя, школа, баллы до/после, скриншот или видео) и уберите .t-ribbon. Выдуманные отзывы не публикуйте. -->
+    <div class="results stagger">
+      <article class="tcard reveal">
+        <span class="t-ribbon"><span lang="kk">Үлгі — нақты пікірмен ауыстыру керек</span><span lang="ru">Шаблон — заменить реальным отзывом</span></span>
+        <p class="t-score"><span lang="kk">[бастапқы] → [ҰБТ]</span><span lang="ru">[было] → [ЕНТ]</span></p>
+        <p class="t-name"><span lang="kk">[Оқушының аты-жөні]</span><span lang="ru">[Имя и фамилия ученика]</span></p>
+        <p class="t-meta"><span lang="kk">[Мектеп, қала · ҰБТ-2026]</span><span lang="ru">[Школа, город · ЕНТ-2026]</span></p>
+        <p class="t-quote"><span lang="kk">«[Оқушының өз сөзімен 1–2 сөйлем]»</span><span lang="ru">«[1–2 предложения от самого ученика]»</span></p>
+      </article>
+      <article class="tcard reveal">
+        <span class="t-ribbon"><span lang="kk">Үлгі — нақты пікірмен ауыстыру керек</span><span lang="ru">Шаблон — заменить реальным отзывом</span></span>
+        <p class="t-score"><span lang="kk">[бастапқы] → [ҰБТ]</span><span lang="ru">[было] → [ЕНТ]</span></p>
+        <p class="t-name"><span lang="kk">[Оқушының аты-жөні]</span><span lang="ru">[Имя и фамилия ученика]</span></p>
+        <p class="t-meta"><span lang="kk">[Мектеп, қала · ҰБТ-2026]</span><span lang="ru">[Школа, город · ЕНТ-2026]</span></p>
+        <p class="t-quote"><span lang="kk">«[Оқушының өз сөзімен 1–2 сөйлем]»</span><span lang="ru">«[1–2 предложения от самого ученика]»</span></p>
+      </article>
+      <article class="tcard reveal">
+        <span class="t-ribbon"><span lang="kk">Үлгі — нақты пікірмен ауыстыру керек</span><span lang="ru">Шаблон — заменить реальным отзывом</span></span>
+        <p class="t-score"><span lang="kk">[бастапқы] → [ҰБТ]</span><span lang="ru">[было] → [ЕНТ]</span></p>
+        <p class="t-name"><span lang="kk">[Ата-ананың аты]</span><span lang="ru">[Имя родителя]</span></p>
+        <p class="t-meta"><span lang="kk">[Ата-ана · қала]</span><span lang="ru">[Родитель · город]</span></p>
+        <p class="t-quote"><span lang="kk">«[Ата-ананың пікірі]»</span><span lang="ru">«[Отзыв родителя]»</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">09 · Бағалар</span><span lang="ru">09 · Цены</span></p>
+      <h2><span lang="kk">Грантқа салынған инвестиция ақылы оқудан жүздеген есе арзан</span><span lang="ru">Подготовка к гранту — в сотни раз дешевле платной учёбы</span></h2>
+      <p class="sec-lead"><span lang="kk">Алдымен тегін тексер — сосын таңда. Төлем Kaspi арқылы.</span><span lang="ru">Сначала проверь уровень бесплатно — потом выбирай. Оплата через Kaspi.</span></p>
+    </div>
+    <!-- TODO: цены — в CONFIG.prices внизу страницы; состав тарифов — здесь -->
+    <div class="plans stagger">
+      <article class="plan reveal">
+        <h3>Старт</h3>
+        <p class="plan-desc"><span lang="kk">Өз бетінше жаттығатындарға</span><span lang="ru">Для тех, кто занимается сам</span></p>
+        <p class="price"><b><span data-price="start">4&nbsp;990</span>&nbsp;₸</b><span><span lang="kk">/ ай</span><span lang="ru">/ мес</span></span></p>
+        <ul>
+          <li><span lang="kk">ҰБТ форматындағы информатика тесттері</span><span lang="ru">Тесты по информатике в формате ЕНТ</span></li>
+          <li><span lang="kk">Таймер және автоматты тексеру</span><span lang="ru">Таймер и автопроверка</span></li>
+          <li><span lang="kk">Тақырып бойынша нәтиже</span><span lang="ru">Результат по темам</span></li>
+          <li><span lang="kk">Тапсыру тарихы</span><span lang="ru">История попыток</span></li>
+        </ul>
+        <a class="btn btn-ghost btn-block" data-wa="start" href="https://wa.me/77718861404" target="_blank" rel="noopener"><span lang="kk">«Старт» тарифін таңдау</span><span lang="ru">Выбрать «Старт»</span></a>
+      </article>
+      <article class="plan featured reveal">
+        <span class="badge"><span lang="kk">Ең тиімді</span><span lang="ru">Самый выгодный</span></span>
+        <h3><span lang="kk">ҰБТ-ға дейін</span><span lang="ru">До ЕНТ</span></h3>
+        <p class="plan-desc"><span lang="kk">Грантқа жүйелі дайындық</span><span lang="ru">Системная подготовка к гранту</span></p>
+        <p class="price"><b><span data-price="full">24&nbsp;990</span>&nbsp;₸</b><span><span lang="kk">бір рет · ҰБТ-ға дейін</span><span lang="ru">один раз · до самого ЕНТ</span></span></p>
+        <p class="permonth"><span data-permonth></span><small><span lang="kk">Кеш қосылған сайын әр айдың құны қымбаттай береді.</span><span lang="ru">Чем позже подключиться, тем дороже обходится каждый месяц.</span></small></p>
+        <ul>
+          <li><span lang="kk">«Старт» тарифіндегінің бәрі</span><span lang="ru">Всё из тарифа «Старт»</span></li>
+          <li><span lang="kk">Әр сұрақтың түсіндірмесі</span><span lang="ru">Разбор каждого вопроса</span></li>
+          <li><span lang="kk">Апта сайын толық сынақ тесті</span><span lang="ru">Полный пробный тест каждую неделю</span></li>
+          <li><span lang="kk">Ата-анаға ай сайынғы есеп</span><span lang="ru">Ежемесячный отчёт для родителей</span></li>
+          <li><span lang="kk">Мұғалімге WhatsApp-та сұрақ қою</span><span lang="ru">Вопросы учителю в WhatsApp</span></li>
+        </ul>
+        <a class="btn btn-primary btn-block btn-lg" data-wa="full" href="https://wa.me/77718861404" target="_blank" rel="noopener"><span lang="kk">Қазір қосылу</span><span lang="ru">Подключить сейчас</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan reveal">
+        <h3>Ментор</h3>
+        <p class="plan-desc"><span lang="kk">Максималды балл көздейтіндерге</span><span lang="ru">Для тех, кто идёт на максимум</span></p>
+        <p class="price"><b><span data-price="mentor">59&nbsp;990</span>&nbsp;₸</b><span><span lang="kk">бір рет · ҰБТ-ға дейін</span><span lang="ru">один раз · до самого ЕНТ</span></span></p>
+        <ul>
+          <li><span lang="kk">«ҰБТ-ға дейін» тарифіндегінің бәрі</span><span lang="ru">Всё из тарифа «До ЕНТ»</span></li>
+          <li><span lang="kk">Автормен жеке онлайн-кездесу — айына 2 рет</span><span lang="ru">Личные онлайн-встречи с автором — 2 раза в месяц</span></li>
+          <li><span lang="kk">Жеке дайындық жоспары</span><span lang="ru">Индивидуальный план подготовки</span></li>
+          <li><span lang="kk">Әлсіз тақырыптарға жеке тапсырмалар</span><span lang="ru">Персональные задания по слабым темам</span></li>
+        </ul>
+        <p class="plan-note"><span lang="kk">Мұғалімнің уақыты шектеулі — орын саны аз.</span><span lang="ru">Время учителя ограничено — мест немного.</span></p>
+        <a class="btn btn-ghost btn-block" data-wa="mentor" href="https://wa.me/77718861404" target="_blank" rel="noopener"><span lang="kk">Бос орын бар ма?</span><span lang="ru">Узнать о местах</span></a>
+      </article>
+    </div>
+    <div class="guarantee reveal">
+      <div class="ic"><svg class="i"><use href="#i-shield"/></svg></div>
+      <p><span lang="kk"><b>7 күндік кепілдік</b>Алғашқы аптада ұнамаса — ақшаңызды толық қайтарамыз.</span><span lang="ru"><b>Гарантия 7 дней</b>Не понравится в первую неделю — вернём деньги полностью.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow"><span lang="kk">10 · Сұрақтар</span><span lang="ru">10 · Вопросы</span></p>
+      <h2><span lang="kk">Жиі қойылатын сұрақтар</span><span lang="ru">Частые вопросы</span></h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary><span lang="kk">Тек информатика ма?</span><span lang="ru">Только информатика?</span></summary>
+        <p><span lang="kk">Иә, біз әдейі бір пәнге — информатикаға шоғырландық. Платформа негізінен «Математика — Информатика» комбинациясын таңдағандарға арналған.</span><span lang="ru">Да, мы сознательно сосредоточились на одном предмете — информатике. Платформа в первую очередь для тех, кто выбрал комбинацию «Математика — Информатика».</span></p>
+      </details>
+      <details>
+        <summary><span lang="kk">Мұғалімім EdCode-та жоқ. Өзім қосыла аламын ба?</span><span lang="ru">Моего учителя нет в EdCode. Можно подключиться самому?</span></summary>
+        <p><span lang="kk">Әрине. Тарифті таңдап, WhatsApp-қа жазыңыз — төлемнен кейін логин мен құпия сөз жібереміз.</span><span lang="ru">Конечно. Выберите тариф и напишите в WhatsApp — после оплаты пришлём логин и пароль.</span></p>
+      </details>
+      <details>
+        <summary><span lang="kk">Телефоннан жұмыс істей ме?</span><span lang="ru">Работает с телефона?</span></summary>
+        <p><span lang="kk">Иә. Платформа браузерде ашылады — телефон, планшет, компьютер, бәрі жарайды. Ештеңе орнатудың қажеті жоқ.</span><span lang="ru">Да. Платформа открывается в браузере: телефон, планшет, компьютер — подойдёт всё. Ничего устанавливать не нужно.</span></p>
+      </details>
+      <details>
+        <summary><span lang="kk">Қалай төлеймін?</span><span lang="ru">Как оплатить?</span></summary>
+        <p><span lang="kk">Kaspi арқылы. Тарифті таңдап, WhatsApp-қа жазыңыз — төлем сілтемесін жібереміз.</span><span lang="ru">Через Kaspi. Выберите тариф и напишите в WhatsApp — пришлём ссылку на оплату.</span></p>
+      </details>
+      <details>
+        <summary><span lang="kk">Грантқа кепілдік бересіздер ме?</span><span lang="ru">Вы гарантируете грант?</span></summary>
+        <p><span lang="kk">Жоқ — грантқа ешкім адал кепілдік бере алмайды. Біз беретініміз: нақты ҰБТ форматы, әлсіз тақырыптарды анықтау және жүйелі дайындық. Ал алғашқы 7 күнде ұнамаса — ақшаны қайтарамыз.</span><span lang="ru">Нет — честно гарантировать грант не может никто. Мы даём реальный формат ЕНТ, показываем слабые темы и ведём системную подготовку. А если в первые 7 дней не понравится — вернём деньги.</span></p>
+      </details>
+      <details>
+        <summary><span lang="kk">Қашан бастаған дұрыс?</span><span lang="ru">Когда лучше начать?</span></summary>
+        <p><span lang="kk">Бүгін. Мамырға дейінгі әр апта — қосымша дайындық сағаттары. Неғұрлым кеш бастасаң, әр тақырыпқа соғұрлым аз уақыт қалады.</span><span lang="ru">Сегодня. Каждая неделя до мая — это дополнительные часы подготовки. Чем позже старт, тем меньше времени остаётся на каждую тему.</span></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-ink perf final" style="--perf:var(--paper)">
+  <div class="wrap reveal">
+    <h2><span lang="kk">Мамырда «ертерек бастауым керек еді» демеу үшін — бүгін баста.</span><span lang="ru">Чтобы в мае не говорить «надо было начать раньше» — начни сегодня.</span></h2>
+    <div class="cd-inline"><b data-days>194</b><span lang="kk">күн қалды</span><span lang="ru"><span data-days-word>дня</span> до ЕНТ</span></div>
+    <p class="sub"><span lang="kk">Алғашқы қадам тегін және 2 минут қана алады.</span><span lang="ru">Первый шаг бесплатный и занимает 2 минуты.</span></p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="#quiz"><span lang="kk">Деңгейімді тегін тексеру</span><span lang="ru">Проверить уровень бесплатно</span><svg class="i"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-wa btn-lg" data-wa="general" href="https://wa.me/77718861404" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span lang="kk">WhatsApp-қа жазу</span><span lang="ru">Написать в WhatsApp</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="EdCode">
+          <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="#FF7A1A"/><path d="M13 11l-6 6 6 6M21 11l6 6-6 6" fill="none" stroke="#17140F" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><em>Ed</em>Code</span>
+        </a>
+        <p class="footer-about"><span lang="kk">Информатикадан ҰБТ-ға онлайн дайындық платформасы.</span><span lang="ru">Онлайн-платформа подготовки к ЕНТ по информатике.</span></p>
+      </div>
+      <div>
+        <h4><span lang="kk">Байланыс</span><span lang="ru">Контакты</span></h4>
+        <ul>
+          <li><a href="tel:+77718861404">+7 771 886 1404</a></li>
+          <li><a href="tel:+77027280307">+7 702 728 0307</a></li>
+          <li><a data-wa="general" href="https://wa.me/77718861404" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Платформа</h4>
+        <ul>
+          <li><a href="https://edcode.kz/login"><span lang="kk">Кіру</span><span lang="ru">Войти</span></a></li>
+          <li><a href="https://edcode.kz/register"><span lang="kk">Тіркелу</span><span lang="ru">Регистрация</span></a></li>
+          <li><a href="#quiz"><span lang="kk">Тегін тест</span><span lang="ru">Бесплатный тест</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 EdCode. <span lang="kk">Барлық құқықтар қорғалған.</span><span lang="ru">Все права защищены.</span></p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-primary" href="#quiz"><span lang="kk">Тегін тест</span><span lang="ru">Бесплатный тест</span></a>
+  <a class="btn btn-wa" data-wa="general" href="https://wa.me/77718861404" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+<a class="wa-float" data-wa="general" href="https://wa.me/77718861404" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-wa"/></svg></a>
+
+<script>
+(() => {
+  // ===== Настройки — менять здесь =====
+  const CONFIG = {
+    untDate: '2027-05-15',     // примерная дата начала основного ЕНТ — обновить, когда НЦТ опубликует график
+    whatsapp: '77718861404',   // номер WhatsApp, только цифры
+    youtubeUrl: '',            // ссылка на YouTube-канал; пока пусто — кнопка скрыта
+    prices: { start: 4990, full: 24990, mentor: 59990 }
+  };
+  const MIN_PER_DAY = 20;
+  const DAY = 864e5;
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const fmt = n => Math.round(n).toLocaleString('ru-RU');
+  const plural = (n, [one, few, many]) => {
+    const a = n % 10, b = n % 100;
+    if (a === 1 && b !== 11) return one;
+    return a >= 2 && a <= 4 && (b < 12 || b > 14) ? few : many;
+  };
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const [uy, um, ud] = CONFIG.untDate.split('-').map(Number);
+  const unt = new Date(uy, um - 1, ud);
+  const daysTo = from => Math.max(0, Math.round((unt - from) / DAY));
+  const daysLeft = daysTo(today);
+
+  // Появление блоков при прокрутке — первым делом, чтобы контент не остался скрытым
+  const countUp = el => {
+    const t0 = performance.now(), dur = 1200;
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      el.textContent = Math.round(daysLeft * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      $$('[data-countup]', e.target).forEach(countUp);
+      io.unobserve(e.target);
+    }), { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('in'));
+  }
+
+  const T = {
+    kk: {
+      title: 'EdCode — информатикадан ҰБТ-ға дайындық | Тегін тест',
+      monthsAt: ['қаңтарда', 'ақпанда', 'наурызда', 'сәуірде', 'мамырда', 'маусымда', 'шілдеде', 'тамызда', 'қыркүйекте', 'қазанда', 'қарашада', 'желтоқсанда'],
+      starts: ['Бүгін бастасаң', '1 қаңтардан бастасаң', '1 наурыздан бастасаң', '15 сәуірден бастасаң'],
+      hours: h => `≈ ${h} сағат`,
+      loss: (i, d) => `${['', '1 қаңтардан', '1 наурыздан', '15 сәуірден'][i]} бастасаң — бүгінгіден ≈ ${d} сағат аз дайындық.`,
+      perMonth: p => `Қазір қосылсаң — айына <b>≈&nbsp;${p}&nbsp;₸</b>`,
+      wa: {
+        general: 'Сәлеметсіз бе! EdCode-та информатикадан ҰБТ-ға дайындық туралы білгім келеді.',
+        start: 'Сәлеметсіз бе! EdCode «Старт» тарифіне қосылғым келеді.',
+        full: 'Сәлеметсіз бе! EdCode «ҰБТ-ға дейін» тарифіне қосылғым келеді.',
+        mentor: 'Сәлеметсіз бе! EdCode «Ментор» тарифінде бос орын бар ма?',
+        parent: 'Сәлеметсіз бе! Мен ата-анамын. Балам информатикадан ҰБТ тапсырады — дайындық туралы білгім келеді.'
+      },
+      quiz: {
+        q: 'Сұрақ', next: 'Келесі сұрақ', finish: 'Нәтижені көру',
+        right: 'Дұрыс!', wrong: 'Қате.', correctIs: 'Дұрыс жауап —',
+        result: 'Сенің нәтижең', byTopic: 'Тақырыптар бойынша:',
+        register: 'Толық диагностика — тегін', sendWA: 'Нәтижені WhatsApp-қа жіберу', restart: 'Қайта тапсыру',
+        verdicts: [
+          ['Мықты база.', '5 сұрақтың бәріне дұрыс жауап бердің. Бірақ ҰБТ-да бейіндік пәннен 40 сұрақ бар және уақыт шектеулі. Толық диагностикадан өтіп, грантқа қаншалықты жақын екеніңді біл.'],
+          ['Жаман емес, бірақ олқылық бар.', 'Төмендегі тақырыптарда қателестің. ҰБТ-да мұндай әр қате — грант конкурсында жоғалған балл.'],
+          ['Дабыл қағатын уақыт.', 'Қазір бастамасаң, мамырға дейін бәрін үлгеру қиын болады. Жақсы жаңалық: уақыт әлі бар — тек дұрыс жоспар керек.']
+        ],
+        waMsg: (s, n, weak) => `Сәлеметсіз бе! EdCode экспресс-тестіндегі нәтижем: ${s}/${n}.` +
+          (weak.length ? ` Әлсіз тақырыптар: ${weak.join(', ')}.` : '') + ' Дайындық туралы кеңес алғым келеді.'
+      }
+    },
+    ru: {
+      title: 'EdCode — подготовка к ЕНТ по информатике | Бесплатный тест',
+      monthsAt: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+      starts: ['Начнёшь сегодня', 'Начнёшь с 1 января', 'Начнёшь с 1 марта', 'Начнёшь с 15 апреля'],
+      hours: h => `≈ ${h} ${plural(h, ['час', 'часа', 'часов'])}`,
+      loss: (i, d) => `Начнёшь ${['', 'с 1 января', 'с 1 марта', 'с 15 апреля'][i]} — на ≈ ${d} ${plural(d, ['час', 'часа', 'часов'])} меньше подготовки, чем при старте сегодня.`,
+      perMonth: p => `Если подключиться сейчас — <b>≈&nbsp;${p}&nbsp;₸</b> в&nbsp;месяц`,
+      wa: {
+        general: 'Здравствуйте! Хочу узнать о подготовке к ЕНТ по информатике в EdCode.',
+        start: 'Здравствуйте! Хочу подключить тариф «Старт» в EdCode.',
+        full: 'Здравствуйте! Хочу подключить тариф «До ЕНТ» в EdCode.',
+        mentor: 'Здравствуйте! Есть ли свободные места на тарифе «Ментор» в EdCode?',
+        parent: 'Здравствуйте! Я родитель, ребёнок сдаёт ЕНТ по информатике. Хочу узнать о подготовке.'
+      },
+      quiz: {
+        q: 'Вопрос', next: 'Следующий вопрос', finish: 'Показать результат',
+        right: 'Верно!', wrong: 'Неверно.', correctIs: 'Правильный ответ —',
+        result: 'Твой результат', byTopic: 'По темам:',
+        register: 'Полная диагностика — бесплатно', sendWA: 'Отправить результат в WhatsApp', restart: 'Пройти заново',
+        verdicts: [
+          ['Сильная база.', 'Все 5 ответов верные. Но на ЕНТ по профильному предмету 40 вопросов и жёсткий лимит времени. Пройди полную диагностику и узнай, насколько близко ты к гранту.'],
+          ['Неплохо, но есть пробелы.', 'Есть ошибки в темах ниже. На ЕНТ каждая такая ошибка — потерянный балл в конкурсе на грант.'],
+          ['Пора бить тревогу.', 'Если не начать сейчас, к маю будет трудно всё успеть. Хорошая новость: время ещё есть — нужен правильный план.']
+        ],
+        waMsg: (s, n, weak) => `Здравствуйте! Мой результат в экспресс-тесте EdCode: ${s}/${n}.` +
+          (weak.length ? ` Слабые темы: ${weak.join(', ')}.` : '') + ' Хочу консультацию по подготовке.'
+      }
+    }
+  };
+
+  const QUIZ = [
+    {
+      topic: { kk: 'Санау жүйелері', ru: 'Системы счисления' },
+      q: { kk: '1011₂ екілік санын ондық санау жүйесіне аудар.', ru: 'Переведи двоичное число 1011₂ в десятичную систему.' },
+      opts: ['9', '11', '13', '22'], a: 1,
+      why: { kk: '1011₂ = 1·8 + 0·4 + 1·2 + 1·1 = 11.', ru: '1011₂ = 1·8 + 0·4 + 1·2 + 1·1 = 11.' }
+    },
+    {
+      topic: { kk: 'Ақпаратты өлшеу', ru: 'Измерение информации' },
+      q: { kk: '2 Кбайт неше битке тең?', ru: 'Сколько бит в 2 Кбайтах?' },
+      opts: ['2 048', '16 000', '16 384', '20 480'], a: 2,
+      why: { kk: '1 Кбайт = 1024 байт, 1 байт = 8 бит. 2 · 1024 · 8 = 16 384 бит.', ru: '1 Кбайт = 1024 байта, 1 байт = 8 бит. 2 · 1024 · 8 = 16 384 бита.' }
+    },
+    {
+      topic: { kk: 'Логика негіздері', ru: 'Основы логики' },
+      q: { kk: 'A = 1, B = 0 болса, қай өрнектің мәні 1-ге (ақиқат) тең?', ru: 'Если A = 1 и B = 0, какое выражение равно 1 (истина)?' },
+      opts: ['A ∧ B', '¬A', 'A ∨ B', '¬A ∨ B'], a: 2,
+      why: { kk: '∨ (НЕМЕСЕ) кемінде бір операнд 1 болса, 1 береді. Ал A ∧ B = 0, ¬A = 0, ¬A ∨ B = 0 ∨ 0 = 0.', ru: '∨ (ИЛИ) даёт 1, если хотя бы один операнд равен 1. А A ∧ B = 0, ¬A = 0, ¬A ∨ B = 0 ∨ 0 = 0.' }
+    },
+    {
+      topic: { kk: 'Программалау (Python)', ru: 'Программирование (Python)' },
+      q: { kk: 'Бағдарлама экранға не шығарады?', ru: 'Что выведет программа?' },
+      code: 's = 0\nfor i in range(1, 5):\n    s += i\nprint(s)',
+      opts: ['4', '9', '10', '15'], a: 2,
+      why: { kk: 'range(1, 5) — бұл 1, 2, 3, 4 (5 кірмейді). s = 1 + 2 + 3 + 4 = 10.', ru: 'range(1, 5) — это 1, 2, 3, 4 (5 не входит). s = 1 + 2 + 3 + 4 = 10.' }
+    },
+    {
+      topic: { kk: 'Компьютерлік желілер', ru: 'Компьютерные сети' },
+      q: { kk: 'Қай IP-адрес дұрыс жазылған?', ru: 'Какой IP-адрес записан правильно?' },
+      opts: ['192.168.1.256', '10.0.0.1', '172.16.300.1', '192.168.1'], a: 1,
+      why: { kk: 'IPv4-адрес — нүктемен бөлінген 4 сан, әрқайсысы 0-ден 255-ке дейін. 256 мен 300 — шектен тыс, ал 192.168.1-де тек 3 сан бар.', ru: 'IPv4-адрес — 4 числа через точку, каждое от 0 до 255. 256 и 300 выходят за предел, а в 192.168.1 всего 3 числа.' }
+    }
+  ];
+
+  let lang = 'kk';
+  const waHref = text => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+  const icon = id => `<svg class="i"><use href="#${id}"/></svg>`;
+
+  function renderStatic() {
+    $$('[data-days]').forEach(el => { el.textContent = daysLeft; });
+    $$('[data-days-word]').forEach(el => { el.textContent = plural(daysLeft, ['день', 'дня', 'дней']); });
+    $$('[data-unt-date]').forEach(el => {
+      el.textContent = `${ud} ${T[el.closest('[lang]').getAttribute('lang')].monthsAt[um - 1]}`;
+    });
+    $$('[data-price]').forEach(el => { el.textContent = fmt(CONFIG.prices[el.dataset.price]); });
+    if (CONFIG.youtubeUrl) {
+      $('[data-youtube]').hidden = false;
+      $('[data-youtube-link]').href = CONFIG.youtubeUrl;
+    }
+  }
+
+  function renderTime(t) {
+    const starts = [today, new Date(uy, 0, 1), new Date(uy, 2, 1), new Date(uy, 3, 15)];
+    const rows = starts
+      .map((d, i) => ({ i, h: Math.round(daysTo(d) * MIN_PER_DAY / 60) }))
+      .filter(r => r.i === 0 || (starts[r.i] > today && r.h > 0));
+    const max = rows[0].h || 1;
+    $('#time-bars').innerHTML = rows.map((r, k) => `
+      <div class="bar-row${k ? ' later' : ''}">
+        <span class="lbl">${t.starts[r.i]}</span><span class="val">${t.hours(r.h)}</span>
+        <span class="track"><span class="fill" style="width:${(r.h / max * 100).toFixed(1)}%"></span></span>
+      </div>`).join('');
+    const ref = rows.find(r => r.i === 2) || rows[rows.length - 1];
+    const loss = $('#loss-line');
+    loss.hidden = !ref || ref.i === 0;
+    if (!loss.hidden) $('span', loss).textContent = t.loss(ref.i, rows[0].h - ref.h);
+  }
+
+  function renderPerMonth(t) {
+    const months = daysLeft / 30.44;
+    const box = $('.permonth');
+    box.hidden = months < 1.5;
+    if (!box.hidden) $('[data-permonth]').innerHTML = t.perMonth(fmt(Math.round(CONFIG.prices.full / months / 100) * 100));
+  }
+
+  const range = $('#tuition');
+  function renderCalc() {
+    const v = +range.value, total = v * 4, ratio = Math.floor(total / CONFIG.prices.full);
+    range.style.setProperty('--p', `${(v - range.min) / (range.max - range.min) * 100}%`);
+    range.setAttribute('aria-valuetext', `${fmt(v)} ₸`);
+    $('#tuition-out').textContent = `${fmt(v)} ₸`;
+    $('#total-out').textContent = `${fmt(total)} ₸`;
+    $$('[data-ratio]').forEach(el => { el.textContent = fmt(ratio); });
+    $$('[data-ratio-word]').forEach(el => { el.textContent = plural(ratio, ['раз', 'раза', 'раз']); });
+  }
+  range.addEventListener('input', renderCalc);
+
+  // ===== Экспресс-тест =====
+  const quizEl = $('#quiz-app');
+  const state = { i: 0, picks: [] };
+
+  function renderQuiz() {
+    const t = T[lang].quiz;
+    if (state.i >= QUIZ.length) return renderResult(t);
+    const q = QUIZ[state.i], picked = state.picks[state.i], answered = picked !== undefined;
+    const last = state.i === QUIZ.length - 1;
+    const opts = q.opts.map((o, k) => {
+      const cls = !answered ? '' : k === q.a ? ' is-right' : k === picked ? ' is-wrong' : '';
+      return `<button type="button" class="opt${cls}" data-k="${k}"${answered ? ' disabled' : ''}><span class="opt-l">${'ABCD'[k]}</span><span>${esc(o)}</span></button>`;
+    }).join('');
+    const ok = picked === q.a;
+    quizEl.innerHTML = `
+      <div class="q-top"><span>${t.q} ${state.i + 1} / ${QUIZ.length}</span><span class="q-topic">${esc(q.topic[lang])}</span></div>
+      <div class="q-progress"><i style="width:${(state.i + (answered ? 1 : 0)) / QUIZ.length * 100}%"></i></div>
+      <h3 class="q-text" tabindex="-1">${esc(q.q[lang])}</h3>
+      ${q.code ? `<pre class="q-code"><code>${esc(q.code)}</code></pre>` : ''}
+      <div class="q-opts">${opts}</div>
+      ${answered ? `
+        <div class="fb"><strong class="${ok ? 'ok' : 'bad'}">${ok ? t.right : `${t.wrong} ${t.correctIs} ${'ABCD'[q.a]}.`}</strong>${esc(q.why[lang])}</div>
+        <button type="button" class="btn btn-primary btn-block q-next" data-next>${last ? t.finish : t.next}${icon('i-arrow')}</button>` : ''}`;
+  }
+
+  function renderResult(t) {
+    const score = QUIZ.filter((q, k) => state.picks[k] === q.a).length;
+    const weak = QUIZ.filter((q, k) => state.picks[k] !== q.a).map(q => q.topic[lang]);
+    const [title, text] = t.verdicts[score === QUIZ.length ? 0 : score >= 3 ? 1 : 2];
+    quizEl.innerHTML = `
+      <p class="qr-label">${t.result}</p>
+      <p class="qr-score">${score}<small> / ${QUIZ.length}</small></p>
+      <h3 class="qr-title" tabindex="-1">${title}</h3>
+      <p class="qr-text">${text}</p>
+      <p class="qr-sub">${t.byTopic}</p>
+      <ul class="qr-list">${QUIZ.map((q, k) => {
+        const ok = state.picks[k] === q.a;
+        return `<li class="${ok ? 'ok' : 'bad'}"><span>${esc(q.topic[lang])}</span><span class="m">${ok ? '✓' : '✗'}</span></li>`;
+      }).join('')}</ul>
+      <div class="qr-ctas">
+        <a class="btn btn-primary btn-lg btn-block" href="https://edcode.kz/register">${t.register}${icon('i-arrow')}</a>
+        <a class="btn btn-wa btn-block" href="${esc(waHref(t.waMsg(score, QUIZ.length, weak)))}" target="_blank" rel="noopener">${icon('i-wa')}${t.sendWA}</a>
+      </div>
+      <button type="button" class="link-btn" data-restart>${t.restart}</button>`;
+  }
+
+  function toQuizTop() {
+    if (quizEl.getBoundingClientRect().top < 72) {
+      quizEl.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+    $('.q-text, .qr-title', quizEl)?.focus({ preventScroll: true });
+  }
+
+  quizEl.addEventListener('click', e => {
+    const opt = e.target.closest('.opt');
+    if (opt && !opt.disabled) {
+      const q = QUIZ[state.i];
+      state.picks[state.i] = +opt.dataset.k;
+      renderQuiz();
+      const t = T[lang].quiz;
+      $('#quiz-live').textContent = `${state.picks[state.i] === q.a ? t.right : t.wrong} ${q.why[lang]}`;
+      const next = $('[data-next]', quizEl);
+      next.focus({ preventScroll: true });
+      next.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
+    } else if (e.target.closest('[data-next]')) {
+      state.i++;
+      renderQuiz();
+      toQuizTop();
+    } else if (e.target.closest('[data-restart]')) {
+      state.i = 0;
+      state.picks = [];
+      renderQuiz();
+      toQuizTop();
+    }
+  });
+
+  // ===== Язык =====
+  function applyLang(l) {
+    lang = T[l] ? l : 'kk';
+    const t = T[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dataset.lang = lang;
+    document.title = t.title;
+    $$('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)));
+    $$('a[data-wa]').forEach(a => { a.href = waHref(t.wa[a.dataset.wa]); });
+    renderTime(t);
+    renderPerMonth(t);
+    renderQuiz();
+    try { localStorage.setItem('edcode-lang', lang); } catch (e) {}
+  }
+  $$('[data-set-lang]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.setLang)));
+
+  let initial = new URLSearchParams(location.search).get('lang');
+  if (!initial) { try { initial = localStorage.getItem('edcode-lang'); } catch (e) {} }
+
+  renderStatic();
+  renderCalc();
+  applyLang(initial || 'kk');
+
+  // Нижняя панель на телефоне — появляется, когда первый экран прокручен
+  const mbar = $('#mbar');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => mbar.classList.toggle('show', !e.isIntersecting)).observe($('.hero'));
+  } else {
+    mbar.classList.add('show');
+  }
+})();
+</script>
+</body>
+</html>
